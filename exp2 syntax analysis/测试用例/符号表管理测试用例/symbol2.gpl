@@ -1,0 +1,12 @@
+int a;
+main()
+{
+    func();
+}
+func()
+{
+    a = 2;
+	print(a);
+	print("\n");
+	return 0;
+}

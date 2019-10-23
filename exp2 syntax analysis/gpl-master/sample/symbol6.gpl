@@ -1,0 +1,15 @@
+main()
+{
+    int a;
+    a = 3;
+	func(a);
+	print(a,"\n");
+}
+
+func(c)
+{
+    int a;
+    print(c,"\n");
+	a = 1;
+	print(a,"\n");
+}

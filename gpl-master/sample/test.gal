@@ -1,0 +1,125 @@
+(278, 0x559f94ee84f0) //IDENTIFIER
+(40, -) //'('
+(41, -) //')'
+(123, -) //'{'
+(269, -) //KEYWORD
+(278, 0x559f94ee9560) //IDENTIFIER
+(59, -) //';'
+(278, 0x559f94ee9600) //IDENTIFIER
+(61, -) //'='
+(277, 0x559f94ee9640) //INTEGER
+(59, -) //';'
+(259, -) //KEYWORD
+(40, -) //'('
+(279, 0x559f94ee9700) //TEXT
+(41, -) //')'
+(59, -) //';'
+(259, -) //KEYWORD
+(40, -) //'('
+(278, 0x559f94ee9800) //IDENTIFIER
+(41, -) //')'
+(59, -) //';'
+(125, -) //'}'
+	# head
+	LOD R2,STACK
+	STO (R2),0
+	LOD R4,EXIT
+	STO (R2+4),R4
+
+	# label main
+main:
+
+	# begin
+
+	# a = 3
+	LOD R5,3
+
+	# actual L1
+	LOD R6,L1
+	STO (R2+8),R6
+
+	# call PRINTS
+	LOD R4,STATIC
+	STO (R4+4294967295),R5
+	STO (R2+12),R2
+	LOD R4,R1+32
+	STO (R2+16),R4
+	LOD R2,R2+12
+	JMP PRINTS
+
+	# actual a
+	LOD R4,STATIC
+	LOD R5,(R4+-1)
+	STO (R2+8),R5
+
+	# call PRINTN
+	STO (R2+12),R2
+	LOD R4,R1+32
+	STO (R2+16),R4
+	LOD R2,R2+12
+	JMP PRINTN
+
+	# end
+	LOD R3,(R2+4)
+	LOD R2,(R2)
+	JMP R3
+
+PRINTN:
+	LOD R7,(R2-4) # 789
+	LOD R15,R7 # 789 
+	DIV R7,10 # 78
+	TST R7
+	JEZ PRINTDIGIT
+	LOD R8,R7 # 78
+	MUL R8,10 # 780
+	SUB R15,R8 # 9
+	STO (R2+8),R15 # local 9 store
+
+	# out 78
+	STO (R2+12),R7 # actual 78 push
+
+	# call PRINTN
+	STO (R2+16),R2
+	LOD R4,R1+32
+	STO (R2+20),R4
+	LOD R2,R2+16
+	JMP PRINTN
+
+	# out 9
+	LOD R15,(R2+8) # local 9 
+
+PRINTDIGIT:
+	ADD  R15,48
+	OUT
+
+	# ret
+	LOD R3,(R2+4)
+	LOD R2,(R2)
+	JMP R3
+
+PRINTS:
+	LOD R7,(R2-4)
+
+PRINTC:
+	LOD R15,(R7)
+	DIV R15,16777216
+	TST R15
+	JEZ PRINTSEND
+	OUT
+	ADD R7,1
+	JMP PRINTC
+
+PRINTSEND:
+	# ret
+	LOD R3,(R2+4)
+	LOD R2,(R2)
+	JMP R3
+
+EXIT:
+	END
+
+L1:
+	DBS 104,101,108,108,111,32,119,111,114,108,100,0
+STATIC:
+	DBN 0,0
+STACK:

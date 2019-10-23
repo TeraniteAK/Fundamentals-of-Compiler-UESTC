@@ -1,0 +1,12 @@
+(278, 0x560c6e5762b0) //IDENTIFIER
+(40, -) //'('
+(41, -) //')'
+(123, -) //'{'
+(269, -) //KEYWORD
+(278, 0x560c6e577320) //IDENTIFIER
+(59, -) //';'
+(278, 0x560c6e5773c0) //IDENTIFIER
+(61, -) //'='
+(277, 0x560c6e577400) //INTEGER
+(59, -) //';'
+name not declared as local/global variable

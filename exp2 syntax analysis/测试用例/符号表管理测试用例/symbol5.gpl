@@ -1,0 +1,13 @@
+main()
+{
+    int a;
+	a = 3;
+	print(a,"\n");
+	func(a);
+	print(a,"\n");
+}
+func(a)
+{
+    a = 5;
+	return 0;
+}

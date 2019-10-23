@@ -1,0 +1,11 @@
+main()
+{
+    int a;
+    a = 4;
+    funct(a);
+
+}
+funct(a)
+{
+    print(a,"\n");
+}

@@ -1,0 +1,6 @@
+int a=1;
+main()
+{
+    int b=2;
+    print(a,"\n",b,"\n");
+}

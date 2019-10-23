@@ -1,0 +1,14 @@
+int i,j,k;
+
+main() 
+{
+	print("a");
+	func();
+}
+
+func()
+{
+    print("b");
+	return 0;
+}
+

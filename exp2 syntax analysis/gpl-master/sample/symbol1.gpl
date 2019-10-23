@@ -1,0 +1,6 @@
+int i;
+main()
+{
+    i = 1;
+    print(i,"\n");
+}

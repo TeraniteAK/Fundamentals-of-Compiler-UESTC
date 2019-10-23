@@ -1,0 +1,7 @@
+main()
+{
+    int a;
+    a = 3;
+    print("hello world");
+    print(a);
+}

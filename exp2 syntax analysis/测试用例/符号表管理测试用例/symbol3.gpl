@@ -1,0 +1,14 @@
+main()
+{
+    int a;
+	a = 1;
+	print(a,"\n");
+	func();
+}
+func()
+{
+    int a;
+	a = 4;
+	print(a,"\n");
+	return 0;
+}

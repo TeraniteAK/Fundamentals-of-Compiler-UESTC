@@ -1,0 +1,25 @@
+digraph G{
+n1[label=b,color="red"];
+n2[label=S,color="red"];
+n2->n1[color="red"];
+
+n3[label=a,color="green"];
+n4[label=A,color="green"];  
+n4->n3[color="green"];
+
+n6[label=c,color="yellow"];
+n7[label=c,color="yellow"];
+n8[label=A,color="yellow"];
+n8->n7[color="yellow"];
+n8->n6[color="yellow"];
+n8->n4[color="yellow"];
+
+n9[label=b,color="blue"];
+n10[label=S,color="blue"];
+n10->n9[color="blue"];
+
+n14[label=S,color="hotpink"];
+n14->n2[color="hotpink"];
+n14->n8[color="hotpink"];
+n14->n10[color="hotpink"];
+}

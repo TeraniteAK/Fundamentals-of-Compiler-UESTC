@@ -1,0 +1,15 @@
+(278, 0x55774abab4f0) //IDENTIFIER
+(40, -) //'('
+(41, -) //')'
+(123, -) //'{'
+(269, -) //KEYWORD
+(278, 0x55774abac560) //IDENTIFIER
+(59, -) //';'
+(278, 0x55774abac600) //IDENTIFIER
+(61, -) //'='
+(277, 0x55774abac640) //INTEGER
+(59, -) //';'
+(278, 0x55774abac700) //IDENTIFIER
+(61, -) //'='
+(59, -) //';'
+Bad expression syntax
